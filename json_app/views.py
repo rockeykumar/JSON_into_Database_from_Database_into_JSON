@@ -13,7 +13,6 @@ def index(request):
     obj.save()
     return render(request, 'index.html', {'param': param})
 
-# Single Dictionary
 def json_data(request):
     obj = json_table.objects.get(Q(name='Rocky'))
     param_dict = {}
