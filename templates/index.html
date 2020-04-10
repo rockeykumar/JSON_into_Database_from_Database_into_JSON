@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON </title>
+</head>
+<body>
+{{ json_2d }}
+<br>
+<h1>JSON Data Single Dictionary</h1>
+{{ param }}<br><br>
+Name : {{ param.0 }}<br>
+JSON data : {{ param.1 }}<br><br>
+
+{% for key, value in param.1.items %}
+    {{ key }} : {{ value }} <br>
+{% endfor %}
+<br>
+<h1>------------------------------------------------------------------------------------</h1>
+<br>
+
+<h1>JSON Data 2-D Dictionary</h1>
+{{ param2d }}<br><br>
+Name : {{ param2d.0.0 }}<br>
+JSON data : {{ param2d.0.1 }}<br><br>
+
+{% for key, value in param2d.0.1.items %}
+    {{ key }} : {{ value }} <br>
+{% endfor %}
+
+</body>
+</html>
